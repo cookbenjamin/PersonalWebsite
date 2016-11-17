@@ -11,7 +11,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
 	display: block; }
 
 body {
@@ -119,9 +119,6 @@ body h1 {
 	max-width: 800px;
 	padding: 50px;
 }
-#fullpage {
-	margin-top: -100px;
-}
 
 body h2, h2 > a {
 	font-size: 35px; }
@@ -134,7 +131,7 @@ body p.big, p.big > a {
 	font-size: 26px; }
 body p, p > a {
 	font-weight: 100;
-	margin: 30px 0;
+	margin-top: 30px;
 	line-height: 1.5em;
 	font-size: 18px; }
 h4, h4 > a {
@@ -420,23 +417,41 @@ html.fp-enabled,
 .container {
 	margin: 20px;
 }
-/*# sourceMappingURL=style.css.map */
+/*!*# sourceMappingURL=style.css.map *!*/
 
 
-
+#main {
+	padding-top: 40px;
+}
 @media (min-width:320px)  { 
-	/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+	/* iPhone */
 	#circle {
-		width: 200px;
-		height: 200px;
+		width: 180px;
+		height: 180px;
+	}
+	#right > h1 {
+		font-size: 37px;
+	}
+	#right > p {
+		font-size: 18px;
+	}
+	header {
+		display: none;
 	}
 }
-@media (min-width:480px)  { 
-	/* smartphones, Android phones, landscape iPhone */ 
+@media (min-width:414px)  {
+	/* iPhone 6/7 Plus */
 	#circle {
-		width: 300px;
-		height: 300px;
+		width: 210px;
+		height: 210px;
 	}
+	#right > h1 {
+		font-size: 43px;
+	}
+	#right > p {
+		font-size: 21px;
+	}
+
 }
 @media (min-width:600px)  { 
 	/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
@@ -444,12 +459,21 @@ html.fp-enabled,
 		width: 300px;
 		height: 300px;
 	}
+	h1 {
+		font-size: 30px;
+	}
 }
 @media (min-width:801px)  { 
 	/* tablet, landscape iPad, lo-res laptops ands desktops */
 	#circle {
-		width: 300px;
-		height: 300px;
+		width: 250px;
+		height: 250px;
+	}
+	h1 {
+		font-size: 30px;
+	}
+	#right {
+		max-width: 600px;
 	}
 }
 @media (min-width:1025px) { 
@@ -460,6 +484,9 @@ html.fp-enabled,
 	}
 	#right {
 		max-width: 600px;
+	}
+	header {
+		display: block;
 	}
 }
 @media (min-width:1281px) { 
