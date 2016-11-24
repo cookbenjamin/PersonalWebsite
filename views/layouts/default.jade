@@ -36,29 +36,20 @@ html
 
 	//- HTML BODY
 	body
-		div#fb-root
-		script.
-			(function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=418922448252711";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
 
 		//- HEADER
 		block header
 			
 
-		button#js-btn--menu.btn.btn--menu(onclick="toggleMenu()")
-			span
-			span
-			span
+		div#js-btn--menu.btn.btn--menu(onclick="toggleMenu()")
+			span.top
+			span.middle
+			span.bottom
 		div#navigation
 			ul#menu
-				a(href="/#home"): li Home
-				a(href="/#projects"): li Projects
-				a(href="/#contact"): li Contact
+				a(href="/#home"): li(onclick="toggleMenu()") Home
+				a(href="/#projects"): li(onclick="toggleMenu()") Projects
+				a(href="/#contact"): li(onclick="toggleMenu()") Contact
 		
 		block content
 			
