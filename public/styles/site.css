@@ -35,6 +35,10 @@ html, body {
 	padding: 0;
 
 }
+
+/*
+Custom Table styling
+*/
 table {
 	text-align: left;
 	/*margin: auto;*/
@@ -52,7 +56,9 @@ tr:hover {
 
 }
 
-
+/*
+Custom basic styling
+*/
 body {
 	background: #fff;
 	width: 100%;
@@ -94,6 +100,90 @@ p.big > a, td > a {
 a.social > img {
 	width: 60px;
 }
+.btn > span {
+	position: relative;
+	top: 0;
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin-bottom: 5px;
+	background-color: black;
+	transition: .5s all;
+}
+.btn.open > span {
+	background-color: white;
+
+}
+.btn.open > span.top {
+	-webkit-transform: translateY(8px) rotateZ(135deg);
+	-moz-transform: translateY(8px) rotateZ(135deg);
+	-ms-transform: translateY(8px) rotateZ(135deg);
+	-o-transform: translateY(8px) rotateZ(135deg);
+	transform: translateY(8px) rotateZ(135deg);
+}
+.btn.open span.bottom {
+	-webkit-transform: translateY(-8px) rotateZ(225deg);
+	-moz-transform: translateY(-8px) rotateZ(225deg);
+	-ms-transform: translateY(-8px) rotateZ(225deg);
+	-o-transform: translateY(-8px) rotateZ(225deg);
+	transform: translateY(-8px) rotateZ(225deg);
+}
+
+.btn.open span.middle {
+	-webkit-transform: rotateZ(135deg);
+	opacity: 0;
+	-moz-transform: rotateZ(135deg);
+	-ms-transform: rotateZ(135deg);
+	-o-transform: rotateZ(135deg);
+	transform: rotateZ(135deg);
+}
+
+.btn {
+	background: none;
+	border: none;
+	position: fixed;
+	top: 25px;
+	left: 25px;
+	z-index: 2;
+	transition: .5s all;
+}
+
+
+#navigation {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .8);
+	z-index: 1;
+	opacity: 0;
+	pointer-events: none;
+}
+#navigation > ul > a > li {
+	color: white;
+	line-height: 100px;
+	transition: .5s all;
+}
+#navigation > ul > a > li:hover {
+	background: rgba(0, 0, 0, .5);
+}
+#navigation > ul {
+	position: absolute;
+	width: 100%;
+	height: 300px;
+	top: 50%;
+	margin-top: -150px;
+
+}
+#navigation {
+	font-size: 20px;
+	transition: all .5s;
+}
+#navigation.open {
+	opacity: 1;
+	pointer-events: initial;
+}
 /**
  * fullPage 2.6.6
  * https://github.com/alvarotrigo/fullPage.js
@@ -101,6 +191,7 @@ a.social > img {
  *
  * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
  */
+
 html.fp-enabled,
 .fp-enabled body {
 	margin: 0;
@@ -301,94 +392,9 @@ html.fp-enabled,
 }
 /*!*# sourceMappingURL=style.css.map *!*/
 
-
-#main {
-	padding-top: 40px;
-}
-.btn > span {
-	position: relative;
-	top: 0;
-	display: block;
-	width: 25px;
-	height: 3px;
-	margin-bottom: 5px;
-	background-color: black;
-	transition: .5s all;
-}
-.btn.open > span {
-	background-color: white;
-
-}
-.btn.open > span.top {
-	-webkit-transform: translateY(8px) rotateZ(135deg);
-	/*-moz-transform: translateY(13px) rotateZ(45deg);*/
-	/*-ms-transform: translateY(13px) rotateZ(45deg);*/
-	/*-o-transform: translateY(13px) rotateZ(45deg);*/
-	/*transform: translateY(13px) rotateZ(45deg);*/
-}
-.btn.open span.bottom {
-	-webkit-transform: translateY(-8px) rotateZ(225deg);
-	/*-moz-transform: translateY(-13px) rotateZ(-45deg);*/
-	/*-ms-transform: translateY(-13px) rotateZ(-45deg);*/
-	/*-o-transform: translateY(-13px) rotateZ(-45deg);*/
-	/*transform: translateY(-13px) rotateZ(-45deg);*/
-}
-
-.btn.open span.middle {
-	-webkit-transform: rotateZ(135deg);
-	opacity: 0;
-	/*-moz-transform: rotateZ(-45deg);*/
-	/*-ms-transform: rotateZ(-45deg);*/
-	/*-o-transform: rotateZ(-45deg);*/
-	/*transform: rotateZ(-45deg);*/
-}
-
-.btn {
-	background: none;
-	border: none;
-	position: fixed;
-	top: 25px;
-	left: 25px;
-	z-index: 2;
-	transition: .5s all;
-}
-
-
-#navigation {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, .8);
-	z-index: 1;
-	opacity: 0;
-	pointer-events: none;
-}
-#navigation > ul > a > li {
-	color: white;
-	line-height: 100px;
-	transition: .5s all;
-}
-#navigation > ul > a > li:hover {
-	background: rgba(0, 0, 0, .5);
-}
-#navigation > ul {
-	position: absolute;
-	width: 100%;
-	height: 300px;
-	top: 50%;
-	margin-top: -150px;
-
-}
-#navigation {
-	font-size: 20px;
-	transition: all .5s;
-}
-#navigation.open {
-	opacity: 1;
-	pointer-events: initial;
-}
+/*
+Responsive Styling
+*/
 @media (min-width:320px)  { 
 	/* iPhone */
 	#circle {
@@ -461,26 +467,27 @@ html.fp-enabled,
 	}
 	.btn.open > span.top {
 		-webkit-transform: translateY(13px) rotateZ(135deg);
-		/*-moz-transform: translateY(13px) rotateZ(45deg);*/
-		/*-ms-transform: translateY(13px) rotateZ(45deg);*/
-		/*-o-transform: translateY(13px) rotateZ(45deg);*/
-		/*transform: translateY(13px) rotateZ(45deg);*/
+		-moz-transform: translateY(13px) rotateZ(135deg);
+		-ms-transform: translateY(13px) rotateZ(135deg);
+		-o-transform: translateY(13px) rotateZ(135deg);
+		transform: translateY(13px) rotateZ(135deg);
 	}
 	.btn.open span.bottom {
 		-webkit-transform: translateY(-13px) rotateZ(225deg);
-		/*-moz-transform: translateY(-13px) rotateZ(-45deg);*/
-		/*-ms-transform: translateY(-13px) rotateZ(-45deg);*/
-		/*-o-transform: translateY(-13px) rotateZ(-45deg);*/
-		/*transform: translateY(-13px) rotateZ(-45deg);*/
+		-moz-transform: translateY(-13px) rotateZ(225deg);
+		-ms-transform: translateY(-13px) rotateZ(225deg);
+		-o-transform: translateY(-13px) rotateZ(225deg);
+		transform: translateY(-13px) rotateZ(225deg);
 	}
 
 	.btn.open span.middle {
 		-webkit-transform: rotateZ(135deg);
 		opacity: 0;
-	/*-moz-transform: rotateZ(-45deg);*/
-	/*-ms-transform: rotateZ(-45deg);*/
-	/*-o-transform: rotateZ(-45deg);*/
-
+		-moz-transform: rotateZ(135deg);
+		-ms-transform: rotateZ(135deg);
+		-o-transform: rotateZ(135deg);
+		transform: rotateZ(135deg);
+	}
 	td, th {
 		padding: 20px;
 		font-size: 24px;

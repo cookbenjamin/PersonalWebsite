@@ -1,21 +1,17 @@
 doctype html
 html
-
 	//- HTML HEADER
 	head
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
-		
 		title Benjamin Cook
-
-			
-		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+		// Uncomment the next line for favicon
+		//link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800i" rel="stylesheet")
 
 		//- Customise the stylesheet for your site by editing /public/styles/site.sass
 		link(href="/styles/site.css", rel="stylesheet")
-
 
 		//- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
 		//- Safely remove this block if you are not targeting IE8
@@ -25,10 +21,6 @@ html
 		//-[endif]
 
 		//- Include template-specific stylesheets by extending the css block
-		script.
-			function resizeIframe(obj) {
-				obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-			}
 		block css
 
 		//- Add any other template-specific HEAD tags by extending the head block
@@ -37,29 +29,38 @@ html
 	//- HTML BODY
 	body
 
-		//- HEADER
+		//- Add any other content pre-body by extending the header block
 		block header
-			
 
-		div#js-btn--menu.btn.btn--menu(onclick="site.toggleMenu()")
+		//- HAMBURGER FOR NAVIGATION
+		div.btn(onclick="site.toggleMenu()")
 			span.top
 			span.middle
 			span.bottom
+
+		//- NAVIGATION MENU
 		div#navigation
 			ul#menu
 				a(href="/#home"): li(onclick="site.toggleMenu()") Home
 				a(href="/#projects"): li(onclick="site.toggleMenu()") Projects
 				a(href="/#contact"): li(onclick="site.toggleMenu()") Contact
-		
-		block content
-			
-		script(src='/js/jquery/jquery-1.11.3.min.js')
-		script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
-			
-		script(src="js/fullpage/scrolloverflow.min.js")
-		script(src="js/fullpage/fullpage.js")
-		script(src="js/fullpage/fullpageInit.js")
 
+		//- Add more content by extending the content block
+		block content
+
+		//- JAVASCRIPTS
+		// Jquery
+		script(src='/js/jquery/jquery-1.11.3.min.js')
+		// Bootstrap
+		script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
+		// Scrolloverflow (For fullpage to allow for content that exceeds screen height)
+		script(src="js/fullpage/scrolloverflow.min.js")
+		// Fullpage.js
+		script(src="js/fullpage/fullpage.js")
+		// Initialisation of fullpage
+		script(src="js/fullpage/fullpageInit.js")
+		// Custom Javascript
 		script(src="js/js/js.js")
 
+		//- Add any template specific scripts by extending the js block
 		block js

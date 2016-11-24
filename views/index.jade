@@ -1,15 +1,19 @@
 extends layouts/default
 
 block content
+	// Wrapping the whole page in the fullpage id so that fullpage will work
 	#fullpage
+		// First Section. I.e. welcome screen
 		section.vertical-scrolling
 			div#main
+				// Image is styled to be framed in a circle
 				div#circle
 					img(src="images/me2.jpg")
 				div#right
 					h1 Benjamin Cook
 					p.big(style="text-align: justify") Hello world, I'm a software engineer in the San Francisco Bay Area. I like to use machine learning and artificial intelligence to solve challenging problems and impact the world for the better.
 					p.big: a(href="/#contact") Get in touch
+		// Projects Section
 		section.vertical-scrolling
 			h1 My Projects
 			p.big Here are some of the projects I've been working on
@@ -30,6 +34,7 @@ block content
 					td
 						a(href="https://github.com/cookbenjamin/helloWorld" target="_blank") Code
 			p.big: a(href="https://github.com/cookbenjamin" target="_blank") View more projects
+		//	Contact Me Section
 		section.vertical-scrolling.fp-auto-height
 			h1 Say Hello
 			p.big If you would like to find out more, don't be shy.<br />Feel free to call, email, or message me.
