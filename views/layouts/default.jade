@@ -41,15 +41,15 @@ html
 		block header
 			
 
-		div#js-btn--menu.btn.btn--menu(onclick="toggleMenu()")
+		div#js-btn--menu.btn.btn--menu(onclick="site.toggleMenu()")
 			span.top
 			span.middle
 			span.bottom
 		div#navigation
 			ul#menu
-				a(href="/#home"): li(onclick="toggleMenu()") Home
-				a(href="/#projects"): li(onclick="toggleMenu()") Projects
-				a(href="/#contact"): li(onclick="toggleMenu()") Contact
+				a(href="/#home"): li(onclick="site.toggleMenu()") Home
+				a(href="/#projects"): li(onclick="site.toggleMenu()") Projects
+				a(href="/#contact"): li(onclick="site.toggleMenu()") Contact
 		
 		block content
 			
