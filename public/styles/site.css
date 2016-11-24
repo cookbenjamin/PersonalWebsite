@@ -326,6 +326,8 @@ html.fp-enabled,
 
 #navigation {
 	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, .8);
@@ -353,6 +355,9 @@ html.fp-enabled,
 #navigation.open {
 	opacity: 1;
 	pointer-events: initial;
+}
+section {
+	/*margin: 50px 0px;*/
 }
 @media (min-width:320px)  { 
 	/* iPhone */
@@ -386,6 +391,9 @@ html.fp-enabled,
 	/* tablet, landscape iPad, lo-res laptops ands desktops */
 	#right {
 		max-width: 600px;
+	}
+	section {
+		margin: 0;
 	}
 }
 @media (min-width:1281px) { 
