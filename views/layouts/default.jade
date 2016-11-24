@@ -49,18 +49,16 @@ html
 		//- HEADER
 		block header
 			
-		header#header
+
+		button#js-btn--menu.btn.btn--menu(onclick="toggleMenu()")
+			span
+			span
+			span
+		div#navigation
 			ul#menu
-				li
-					a(href="/") Home
-				//li
-				//	a(href="/projects") Projects
-				//li
-				//	a(href="/blog") Blog
-				li
-					a(href="/contact") Contact
-	
-		//.header-placeholder
+				a(href="/#home"): li Home
+				a(href="/#projects"): li Projects
+				a(href="/#contact"): li Contact
 		
 		block content
 			
@@ -70,5 +68,7 @@ html
 		script(src="js/fullpage/scrolloverflow.min.js")
 		script(src="js/fullpage/fullpage.js")
 		script(src="js/fullpage/fullpageInit.js")
+
+		script(src="js/js/js.js")
 
 		block js

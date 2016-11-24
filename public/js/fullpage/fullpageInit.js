@@ -6,7 +6,7 @@ $(document).ready(function () {
 	if (!window.mobilecheck()) {
 		$('#fullpage').fullpage({
 			sectionSelector: '.vertical-scrolling',
-			anchors: ['home', 'contact', 'blog'],
+			anchors: ['home', 'projects', 'contact'],
 			menu: '#menu',
 			scrollOverflow: true,
 			scrollBar: false,

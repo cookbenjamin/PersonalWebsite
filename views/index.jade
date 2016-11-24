@@ -9,5 +9,42 @@ block content
 				div#right
 					h1 Benjamin Cook
 					p.big(style="text-align: justify") Hello world, I'm a software engineer in the San Francisco Bay Area. I like to use machine learning and artificial intelligence to solve challenging problems and impact the world for the better.
-					p.big
-						a.more(href="/contact") Get in touch
+					p.big: a(href="/#contact") Get in touch
+		section.vertical-scrolling
+			h1 My Projects
+			p.big Here are some of the projects I've been working on
+			table
+				tr
+					th Saasplate
+					td boilerplate code for a SAAS app built with a microservice architecture.
+					td
+						a(href="https://github.com/cookbenjamin/saasplate") Code
+					td
+						a(href="http://benjamincook.io:3000") Demo
+				tr
+					th PolyPy
+					td A library that automates polynomial regression analysis to find the ideal model with minimal effort.
+					td(colspan=2)
+						a(href="https://github.com/cookbenjamin/polyPy") Code
+				tr
+					th Drone
+					td Motion controller designed for a fixed wing drone.
+					td(colspan=2)
+						a Code
+				tr
+					th This Website
+					td
+					td(colspan=2)
+						a(href="https://github.com/cookbenjamin/helloWorld") Code
+			p.big: a(href="https://github.com/cookbenjamin") View more
+		section.vertical-scrolling.fp-auto-height
+			h1 Say Hello
+			p.big If you would like to find out more, don't be shy.<br />Feel free to call, email, or message me.
+			br
+			p.big: a(href="tel:+14242422981", target="_blank") 424.242.2981
+			br
+			p.big: a(href="mailto:hello@benjamincook.io", target="_blank") hello@benjamincook.io
+			br
+			a.social(href="https://angel.co/benjamincook", target="_blank"): img(src="images/angellist.png")
+			a.social(href="https://www.linkedin.com/in/benjamin-cook", target="_blank"): img(src="images/linkedin.png")
+			a.social(href="https://github.com/cookbenjamin", target="_blank"): img(src="images/github.png")
