@@ -4,4 +4,18 @@
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-83718583-1', 'auto');
+
+$(".contact-button").on('click', function() {
+        ga('send', 'event', {
+                'eventCategory': 'contact',
+                'eventAction': 'click'}
+                );
+});
+
+$("body").on('click', function() {
+        ga('send', 'event', {
+                'eventCategory': 'firework',
+                'eventAction': 'click'}
+        );
+});
 ga('send', 'pageview');

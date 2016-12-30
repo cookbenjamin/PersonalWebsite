@@ -5,7 +5,7 @@ window.mobilecheck = function() {
 function initialiseFullpage() {
 	$('#fullpage').fullpage({
 		sectionSelector: '.vertical-scrolling',
-		anchors: ['home', 'skills', 'projects', 'contact'],
+		anchors: ['happyNewYear', 'home', 'skills', 'projects', 'contact'],
 		menu: '#menu',
 		responsiveWidth: 1000,
 		afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
@@ -16,11 +16,11 @@ function initialiseFullpage() {
 		},
 		onLeave: function(index, nextIndex, direction){
 			// hide arrow if in contact section
-			if (nextIndex == 4) {
+			if (nextIndex == 5) {
 				site.hideArrow();
 			}
 			// show arrow if leaving contact section
-			if(index == 4){
+			if(index == 5){
 				site.showArrow();
 			}
 		}

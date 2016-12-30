@@ -7,6 +7,14 @@ block content
 		section.vertical-scrolling
 			div#main
 				// Image is styled to be framed in a circle
+				h1 Happy New Year!
+				p.big(style="text-align: center") May it be full of joy, challenges, and excitement!
+				p.big(style="text-align: center") Please scroll down for regular content.
+
+		// First Section. I.e. welcome screen
+		section.vertical-scrolling
+			div#main
+				// Image is styled to be framed in a circle
 				div#circle
 					img(title="Benjamin Cook" alt="Image of Benjamin Cook", src="images/BenjaminCook500.jpg", srcset="images/BenjaminCook500.jpg 500w, images/BenjaminCook400.jpg 400w, images/BenjaminCook210.jpg 210w, images/BenjaminCook180.jpg 180w")
 				div#right
@@ -15,7 +23,7 @@ block content
 					br
 					p.big.center-text
 						a(href="/#skills") Learn More
-						a.margin-left(href="/#contact") Get in touch
+						a.margin-left.contact-button(href="/#contact") Get in touch
 		// Projects Section
 
 		section.vertical-scrolling
@@ -27,7 +35,7 @@ block content
 					br
 					p.big
 						a(href="/skills") Learn More
-						a.margin-left(href="/#contact") Get in touch
+						a.margin-left.contact-button(href="/#contact") Get in touch
 		section.vertical-scrolling
 			div#main
 				img.line-graphic(data-src="/images/line-laptop.png")
@@ -51,7 +59,7 @@ block content
 				br
 				p.big
 					a(href="https://github.com/cookbenjamin" target="_blank") More projects
-					a.margin-left(href="/#contact") Get in touch
+					a.margin-left.contact-button(href="/#contact") Get in touch
 		//	Contact Me Section
 		section.vertical-scrolling.fp-auto-height
 			div#main
@@ -75,3 +83,4 @@ block content
 					a.social(href="https://github.com/cookbenjamin", target="_blank"): i.fa.fa-github-alt.fa-3x(aria-hidden="true")
 block js
 	script(src="js/fullpage/fullpageInit.js")
+	script(src="js/js/fireworks.js")
