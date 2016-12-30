@@ -1,6 +1,6 @@
 {
-  "name": "helloWorld",
-  "version": "0.0.0",
+  "name": "personalWebsite",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
