@@ -28,4 +28,8 @@ router.get('/', function(req, res, next) {
 	res.render('index');
 });
 
+router.get('/skills', function(req, res, next) {
+	res.render('skills');
+});
+
 module.exports = router;

@@ -15,3 +15,24 @@ site.toggleMenu = function() {
     $("#navigation").toggleClass("open");
     $(".btn").toggleClass("open");
 };
+
+/**
+ * Function to scroll down one section.
+ */
+site.moveSectionDown = function() {
+    $.fn.fullpage.moveSectionDown();
+};
+
+/**
+ * Function to show the scroll arrow.
+ */
+site.hideArrow = function() {
+    $(".arrow").addClass("hidden")
+};
+
+/**
+ * Function to hide the scroll arrow.
+ */
+site.showArrow = function() {
+    $(".arrow").removeClass("hidden")
+};

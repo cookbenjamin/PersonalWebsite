@@ -1,21 +1,36 @@
 window.mobilecheck = function() {
-	return screen.width < 800;
+	return $(window).width() < 1001;
 };
 
+function initialiseFullpage() {
+	$('#fullpage').fullpage({
+		sectionSelector: '.vertical-scrolling',
+		anchors: ['home', 'skills', 'projects', 'contact'],
+		menu: '#menu',
+		responsiveWidth: 1000,
+		afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
+
+			// if(index == 4){
+			// 	site.hideArrow();
+			// }
+		},
+		onLeave: function(index, nextIndex, direction){
+			// hide arrow if in contact section
+			if (nextIndex == 4) {
+				site.hideArrow();
+			}
+			// show arrow if leaving contact section
+			if(index == 4){
+				site.showArrow();
+			}
+		}
+	});
+}
+
 $(document).ready(function () {
-	if (window.mobilecheck()) {
-		$('#fullpage').fullpage({
-			sectionSelector: '.vertical-scrolling',
-			anchors: ['home', 'projects', 'contact'],
-			menu: '#menu',
-			autoScrolling: false,
-			fitToSection: false
-		});
-	} else {
-		$('#fullpage').fullpage({
-			sectionSelector: '.vertical-scrolling',
-			anchors: ['home', 'projects', 'contact'],
-			menu: '#menu',
-		});
-	}
+	initialiseFullpage();
+});
+
+$(window).resize(function () {
+	$(window).location.refresh();
 });

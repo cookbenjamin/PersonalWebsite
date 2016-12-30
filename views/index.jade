@@ -8,41 +8,70 @@ block content
 			div#main
 				// Image is styled to be framed in a circle
 				div#circle
-					img(src="images/me2.jpg")
+					img(title="Benjamin Cook" alt="Image of Benjamin Cook", src="images/BenjaminCook500.jpg", srcset="images/BenjaminCook500.jpg 500w, images/BenjaminCook400.jpg 400w, images/BenjaminCook210.jpg 210w, images/BenjaminCook180.jpg 180w")
 				div#right
 					h1 Benjamin Cook
 					p.big(style="text-align: justify") Hello world, I'm a software engineer in the San Francisco Bay Area. I like to use machine learning and artificial intelligence to solve challenging problems and impact the world for the better.
-					p.big: a(href="/#contact") Get in touch
+					br
+					p.big.center-text
+						a(href="/#skills") Learn More
+						a.margin-left(href="/#contact") Get in touch
 		// Projects Section
+
 		section.vertical-scrolling
-			h1 My Projects
-			p.big Here are some of the projects I've been working on
-			table
-				tr
-					th Saasplate
-					td Boilerplate code for a SAAS app built with a microservice architecture.
-					td
-						a(href="https://github.com/cookbenjamin/saasplate" target="_blank") Code
-				tr
-					th PolyPy
-					td A library that automates polynomial regression analysis to find the ideal model with minimal effort.
-					td
-						a(href="https://github.com/cookbenjamin/polyPy" target="_blank") Code
-				tr
-					th This Website
-					td The website you are currently looking at. Built with node.js.
-					td
-						a(href="https://github.com/cookbenjamin/helloWorld" target="_blank") Code
-			p.big: a(href="https://github.com/cookbenjamin" target="_blank") View more projects
+			div#main
+				div.center
+					img.line-graphic(data-src="/images/line-cloud.png")
+					h1 My Knowledge and Skills
+					p.big(style="text-align: justify") With a passion for clean code, excellent knowledge of web standards, and a background in research and consumer behaviour. I have the knowledge and ability to build reliable, scalable, data based web apps.
+					br
+					p.big
+						a(href="/skills") Learn More
+						a.margin-left(href="/#contact") Get in touch
+		section.vertical-scrolling
+			div#main
+				img.line-graphic(data-src="/images/line-laptop.png")
+				h1 My Work
+				ul.horizontal
+					li.info-block
+						h3 Saasplate
+						p Boilerplate code for a SAAS app built with a microservice architecture.
+						p.big
+							a(href="https://github.com/cookbenjamin/saasplate" target="_blank") Learn More
+					li.info-block
+						h3 PolyPy
+						p A library that automates polynomial regression analysis to find the ideal model with minimal effort.
+						p.big
+							a(href="https://github.com/cookbenjamin/polyPy" target="_blank") Learn More
+					li.info-block
+						h3 This Website
+						p The website you are currently looking at. Built with node.js.
+						p.big
+							a(href="https://github.com/cookbenjamin/helloWorld" target="_blank") Learn More
+				br
+				p.big
+					a(href="https://github.com/cookbenjamin" target="_blank") More projects
+					a.margin-left(href="/#contact") Get in touch
 		//	Contact Me Section
 		section.vertical-scrolling.fp-auto-height
-			h1 Say Hello
-			p.big If you would like to find out more, don't be shy.<br />Feel free to call, email, or message me.
-			br
-			p.big: a(href="tel:+14242422981", target="_blank") 424.242.2981
-			br
-			p.big: a(href="mailto:hello@benjamincook.io", target="_blank") hello@benjamincook.io
-			br
-			a.social(href="https://angel.co/benjamincook", target="_blank"): img(src="images/angellist.png")
-			a.social(href="https://www.linkedin.com/in/benjamin-cook", target="_blank"): img(src="images/linkedin.png")
-			a.social(href="https://github.com/cookbenjamin", target="_blank"): img(src="images/github.png")
+			div#main
+				div.center
+					img.line-graphic(data-src="/images/line-phone.png")
+					h1 Say Hello
+					p.big(style="text-align: justify") If you would like to find out more, don't be shy. Feel free to call, email, or message me.
+					br
+					p.big
+						span AUS:
+						a(href="tel:+14242422981", target="_blank")  0417 251 891
+					br
+					p.big
+						span USA/CAN:
+						a(href="tel:+14242422981", target="_blank")  424.242.2981
+					br
+					p.big: a(href="mailto:hello@benjamincook.io", target="_blank") hello@benjamincook.io
+					br
+					a.social(href="https://angel.co/benjamincook", target="_blank"): i.fa.fa-angellist.fa-3x(aria-hidden="true")
+					a.social(href="https://www.linkedin.com/in/benjamin-cook", target="_blank"): i.fa.fa-linkedin.fa-3x(aria-hidden="true")
+					a.social(href="https://github.com/cookbenjamin", target="_blank"): i.fa.fa-github-alt.fa-3x(aria-hidden="true")
+block js
+	script(src="js/fullpage/fullpageInit.js")
