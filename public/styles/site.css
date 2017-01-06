@@ -186,7 +186,7 @@ ul.horizontal > li {
 	position: fixed;
 	top: 25px;
 	left: 50%;
-	margin-left: -20px;
+	margin-left: -15px;
 	z-index: 2;
 	transition: .5s all;
 }
@@ -214,9 +214,9 @@ ul.horizontal > li {
 #navigation > ul {
 	position: absolute;
 	width: 100%;
-	height: 400px;
+	height: 500px;
 	top: 50%;
-	margin-top: -200px;
+	margin-top: -250px;
 
 }
 #navigation {
@@ -289,7 +289,7 @@ i {
 	position: fixed;
 	bottom: 25px;
 	left: 50%;
-	margin-left: -20px;
+	margin-left: -24px;
 	width: 40px;
 	z-index: 1;
 	transition: opacity .2s;
@@ -705,91 +705,4 @@ Responsive Styling
 		width: 250px;
 		margin: auto;
 	}
-	/*.center*/
-}
-/*@media (min-width:1500px) {*/
-	/*!* hi-res laptops and desktops *!*/
-	/*#circle {*/
-		/*width: 500px;*/
-		/*height: 500px;*/
-	/*}*/
-	/*#right, #left {*/
-		/*max-width: 800px;*/
-	/*}*/
-	/*#main > h1, h1 {*/
-		/*font-size: 100px;*/
-	/*}*/
-	/*#navigation {*/
-		/*font-size: 30px;*/
-	/*}*/
-	/*h3 {*/
-		/*font-size: 36px;*/
-	/*}*/
-	/*p, p > a {*/
-		/*font-size: 30px;*/
-	/*}*/
-	/*.btn > span {*/
-		/*width: 40px;*/
-		/*height: 5px;*/
-		/*margin-bottom: 8px;*/
-	/*}*/
-	/*.btn {*/
-		/*margin-left: -20px;*/
-	/*}*/
-	/*.btn.open > span.top {*/
-		/*-webkit-transform: translateY(13px) rotateZ(135deg);*/
-		/*-moz-transform: translateY(13px) rotateZ(135deg);*/
-		/*-ms-transform: translateY(13px) rotateZ(135deg);*/
-		/*-o-transform: translateY(13px) rotateZ(135deg);*/
-		/*transform: translateY(13px) rotateZ(135deg);*/
-	/*}*/
-	/*.btn.open span.bottom {*/
-		/*-webkit-transform: translateY(-13px) rotateZ(225deg);*/
-		/*-moz-transform: translateY(-13px) rotateZ(225deg);*/
-		/*-ms-transform: translateY(-13px) rotateZ(225deg);*/
-		/*-o-transform: translateY(-13px) rotateZ(225deg);*/
-		/*transform: translateY(-13px) rotateZ(225deg);*/
-	/*}*/
-
-	/*.btn.open span.middle {*/
-		/*-webkit-transform: rotateZ(135deg);*/
-		/*opacity: 0;*/
-		/*-moz-transform: rotateZ(135deg);*/
-		/*-ms-transform: rotateZ(135deg);*/
-		/*-o-transform: rotateZ(135deg);*/
-		/*transform: rotateZ(135deg);*/
-	/*}*/
-	/*.fa {*/
-		/*font-size: 56px;*/
-		/*line-height: 56px;*/
-	/*}*/
-	/*td, th {*/
-		/*padding: 20px;*/
-		/*font-size: 24px;*/
-	/*}*/
-	/*section {*/
-		/*border: none;*/
-	/*}*/
-/*}*/
-body {
-	background: black;
-}
-h1, h2, h3, p, i {
-	color: white !important;
-}
-
-.btn > span {
-	background-color: white;
-}
-
-section {
-	border-top: #444;
-}
-
-canvas {
-	position:fixed;
-	top:0;
-	left:0;
-	width: 100%;
-	height: 100%;
 }

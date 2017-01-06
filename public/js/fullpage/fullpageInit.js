@@ -5,7 +5,7 @@ window.mobilecheck = function() {
 function initialiseFullpage() {
 	$('#fullpage').fullpage({
 		sectionSelector: '.vertical-scrolling',
-		anchors: ['happyNewYear', 'home', 'skills', 'projects', 'contact'],
+		anchors: ['home', 'skills', 'tools', 'projects', 'contact'],
 		menu: '#menu',
 		responsiveWidth: 1000,
 		afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
@@ -16,11 +16,11 @@ function initialiseFullpage() {
 		},
 		onLeave: function(index, nextIndex, direction){
 			// hide arrow if in contact section
-			if (nextIndex == 5) {
+			if (nextIndex == 4) {
 				site.hideArrow();
 			}
 			// show arrow if leaving contact section
-			if(index == 5){
+			if(index == 4){
 				site.showArrow();
 			}
 		}
@@ -29,8 +29,4 @@ function initialiseFullpage() {
 
 $(document).ready(function () {
 	initialiseFullpage();
-});
-
-$(window).resize(function () {
-	$(window).location.refresh();
 });

@@ -2,7 +2,8 @@ extends layouts/default
 
 block content
     // Wrapping the whole page in the fullpage id so that fullpage will work
-    p.big(): a(href="/#skills", style="z-index: 1; position: absolute; top: 20px; left: 20px;") Back
+    p.big(style="z-index: 1; position: absolute; top: 20px; left: 20px;")
+        a(href="/#skills") Back
     #fullpage
         section.vertical-scrolling
             div#main
@@ -15,7 +16,6 @@ block content
             div#main
                 // Image is styled to be framed in a circle
                 div#left
-
                     img.line-graphic(data-src="/images/line-laptop.png", width="300")
                 div#right
                     h1 Clean, Reliable Code

@@ -7,14 +7,6 @@ block content
 		section.vertical-scrolling
 			div#main
 				// Image is styled to be framed in a circle
-				h1 Happy New Year!
-				p.big(style="text-align: center") May it be full of joy, challenges, and excitement!
-				p.big(style="text-align: center") Please scroll down for regular content.
-
-		// First Section. I.e. welcome screen
-		section.vertical-scrolling
-			div#main
-				// Image is styled to be framed in a circle
 				div#circle
 					img(title="Benjamin Cook" alt="Image of Benjamin Cook", src="images/BenjaminCook500.jpg", srcset="images/BenjaminCook500.jpg 500w, images/BenjaminCook400.jpg 400w, images/BenjaminCook210.jpg 210w, images/BenjaminCook180.jpg 180w")
 				div#right
@@ -29,16 +21,41 @@ block content
 		section.vertical-scrolling
 			div#main
 				div.center
-					img.line-graphic(data-src="/images/line-cloud.png")
+					img.line-graphic(src="/images/line-cloud.png")
 					h1 My Knowledge and Skills
 					p.big(style="text-align: justify") With a passion for clean code, excellent knowledge of web standards, and a background in research and consumer behaviour. I have the knowledge and ability to build reliable, scalable, data based web apps.
 					br
 					p.big
-						a(href="/skills") Learn More
+						a(href="/#tools") Learn More
 						a.margin-left.contact-button(href="/#contact") Get in touch
+
 		section.vertical-scrolling
 			div#main
-				img.line-graphic(data-src="/images/line-laptop.png")
+				// Image is styled to be framed in a circle
+
+				img.line-graphic(src="/images/line-spanner.png", width="300")
+				h1 The right tools
+				div.center
+					p.big(style="text-align: justify") I have experience with many popular tools and frameworks.
+				ul.horizontal
+					li.info-block
+						h3 Web
+						p Express, Sinatra, Flask, Pug/Jade, SCSS, SASS, Less, JQuery, Angular.js, D3
+						p.big
+					li.info-block
+						h3 Data
+						p MongoDB, PostgreSQL, MySQL, NLTK, Scikit-learn, Scipy, Tensorflow, Theano, Keras, Lasagne, SymPy, MatPlotLib, D3, Pandas, HDF5, Hadoop, Spark
+						p.big
+					li.info-block
+						h3 Languages and Development Tools
+						p Python, Java, C++, Javascript, Node.js, Ruby, RabbitMQ, Docker, Git, Mercurial, HTML5, CSS, SQL,
+				p.big
+					a(href="https://github.com/cookbenjamin" target="_blank") View some work
+					a.margin-left.contact-button(href="/#contact") Get in touch
+
+		section.vertical-scrolling
+			div#main
+				img.line-graphic(src="/images/line-laptop.png")
 				h1 My Work
 				ul.horizontal
 					li.info-block
@@ -64,7 +81,7 @@ block content
 		section.vertical-scrolling.fp-auto-height
 			div#main
 				div.center
-					img.line-graphic(data-src="/images/line-phone.png")
+					img.line-graphic(src="/images/line-phone.png")
 					h1 Say Hello
 					p.big(style="text-align: justify") If you would like to find out more, don't be shy. Feel free to call, email, or message me.
 					br
@@ -83,4 +100,3 @@ block content
 					a.social(href="https://github.com/cookbenjamin", target="_blank"): i.fa.fa-github-alt.fa-3x(aria-hidden="true")
 block js
 	script(src="js/fullpage/fullpageInit.js")
-	script(src="js/js/fireworks.js")

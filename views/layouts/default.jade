@@ -10,7 +10,7 @@ html
 		"Area with an excellent skill set for creating reliable and scalable data-based web applications.")
 		// Uncomment the next line for favicon
 		link(rel="shortcut icon", href="/images/favicon/favicon.ico", type="image/x-icon")
-		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800i" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet")
 
 		//- Font-Awesome for icons and scroll arrow
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css")
@@ -54,9 +54,6 @@ html
 
 	//- HTML BODY
 	body
-		//iframe(src="http://localhost:8000", style="width: 100%; height: 100%; position: fixed; top: 0; left:0; z-index: -1;")
-		canvas#canvas2
-		canvas#canvas
 		//- Add any other content pre-body by extending the header block
 		block header
 
@@ -75,7 +72,8 @@ html
 			ul#menu
 				a(href="/#home"): li.nav1(onclick="site.toggleMenu()") Home
 				a(href="/#skills"): li.nav2(onclick="site.toggleMenu()") Skills
-				a(href="/#projects"): li.nav3(onclick="site.toggleMenu()") Projects
+				a(href="/#tools"): li.nav2(onclick="site.toggleMenu()") Tools
+				a(href="/#projects"): li.nav3(onclick="site.toggleMenu()") Work
 				a(href="/#contact"): li.nav4(onclick="site.toggleMenu()") Contact
 
 		//- Add more content by extending the content block
