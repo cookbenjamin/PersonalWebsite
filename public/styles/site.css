@@ -198,7 +198,7 @@ ul.horizontal > li {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, .8);
+	background: rgba(0, 0, 0, .9);
 	z-index: 1;
 	opacity: 0;
 	pointer-events: none;
@@ -214,9 +214,9 @@ ul.horizontal > li {
 #navigation > ul {
 	position: absolute;
 	width: 100%;
-	height: 500px;
+	height: 600px;
 	top: 50%;
-	margin-top: -250px;
+	margin-top: -300px;
 
 }
 #navigation {
@@ -304,14 +304,14 @@ body {
 }
 
 
-#navigation > #menu > a > .nav1, #navigation > #menu > a > .nav2, #navigation > #menu > a > .nav3, #navigation > #menu > a > .nav4 {
+#navigation > #menu > a > .nav1, #navigation > #menu > a > .nav2, #navigation > #menu > a > .nav3, #navigation > #menu > a > .nav4, #navigation > #menu > a > .nav5, #navigation > #menu > a > .nav6 {
 	-ms-transform: translate(0px, -20px); /* IE 9 */
 	-webkit-transform: translate(0px, -20px); /* Safari */
 	transform: translate(0px, -20px);
 	opacity: 0;
 	transition: all .3s;
 }
-#navigation.open > #menu > a > .nav1, #navigation.open > #menu > a > .nav2, #navigation.open > #menu > a > .nav3, #navigation.open > #menu > a > .nav4 {
+#navigation.open > #menu > a > .nav1, #navigation.open > #menu > a > .nav2, #navigation.open > #menu > a > .nav3, #navigation.open > #menu > a > .nav4, #navigation.open > #menu > a > .nav5, #navigation.open > #menu > a > .nav6 {
 	-ms-transform: translate(0px, 0px); /* IE 9 */
 	-webkit-transform: translate(0px, 0px); /* Safari */
 	transform: translate(0px, 0px);
@@ -332,6 +332,14 @@ body {
 
 #navigation > #menu > a > .nav4 {
 	transition-delay: .3s
+}
+
+#navigation > #menu > a > .nav5 {
+	transition-delay: .4s
+}
+
+#navigation > #menu > a > .nav6 {
+	transition-delay: .5s
 }
 .center {
 	max-width: 600px;

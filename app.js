@@ -1,62 +1,57 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var compression = require('compression');
-var minify = require('express-minify');
+// Simulate config options from your production environment by
+// customising the .env file in your project's root folder.
+require('dotenv').config();
 
-var routes = require('./routes/index');
+// Require keystone
+var keystone = require('keystone');
 
-var app = express();
+// Initialise Keystone with your project's configuration.
+// See http://keystonejs.com/guide/config for available options
+// and documentation.
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+keystone.init({
+  'name': 'personalWebsite',
+  'brand': 'Benjamin Cook',
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
-app.use(compression());
-app.use(minify());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+  'sass': 'public',
+  'static': 'public',
+  'favicon': 'public/images/favicon/favicon.ico',
+  'views': 'views',
+  'view engine': 'pug',
 
-app.use('/', routes);
+  'emails': 'views/emails',
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+  'auto update': true,
+  'session': true,
+  'auth': true,
+  'user model': 'User'
 });
 
-// error handlers
+// Load your project's Models
+keystone.import('models');
 
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
+// Setup common locals for your templates. The following are required for the
+// bundled templates and layouts. Any runtime locals (that should be set uniquely
+// for each request) should be added to ./routes/middleware.js
+keystone.set('locals', {
+  _: require('lodash'),
+  env: keystone.get('env'),
+  utils: keystone.utils,
+  editable: keystone.content.editable,
 });
 
+// Load your project's Routes
+keystone.set('routes', require('./controllers'));
 
-module.exports = app;
+
+// Configure the navigation bar in Keystone's Admin UI
+keystone.set('nav', {
+  posts: ['posts', 'post-categories'],
+  enquiries: 'enquiries',
+  users: 'users'
+});
+
+// Start Keystone to connect to your database and initialise the web server
+
+
+keystone.start();
