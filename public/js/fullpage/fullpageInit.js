@@ -25,8 +25,14 @@ function initialiseFullpage() {
 			}
 		}
 	});
+
+}
+
+function revealContent() {
+	$("body").removeClass("hidden");
 }
 
 $(document).ready(function () {
 	initialiseFullpage();
+	revealContent();
 });

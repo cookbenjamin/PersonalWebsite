@@ -284,7 +284,9 @@ i {
 	display: block;
 	color: #000;
 }
-
+body {
+	transition: opacity .2s;
+}
 .arrow {
 	position: fixed;
 	bottom: 25px;
